@@ -3,7 +3,7 @@ import "./Submitted.css";
 export default function Submitted({ receivedData }) {
   return (
     <div className="success-message">
-      <h2>Submission succesful!</h2>
+      <h2>Submission successful</h2>
     </div>
   );
 }
