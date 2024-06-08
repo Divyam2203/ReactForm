@@ -3,12 +3,13 @@ import { COUNTRIES } from "./COUNTRIES";
 import { CITIES } from "./CITIES";
 import "./Form.css";
 
-export default function Form() {
+export default function Form({ onSubmittedSuccessfully }) {
   function handleSubmit(event) {
     event.preventDefault();
     const fd = new FormData(event.target);
     const data = Object.fromEntries(fd.entries());
-    console.log(fd);
+    //console.log(fd);
+    onSubmittedSuccessfully(data);
   }
 
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -54,18 +55,6 @@ export default function Form() {
             type={passwordToggle}
             name="password"
             id="password"
-            className="short-input"
-            autoComplete="new-password"
-            required
-          />
-        </div>
-        <div className="control">
-          <label htmlFor="confirm-password">Confirm Password</label>
-          <br />
-          <input
-            type={passwordToggle}
-            name="confirm-password"
-            id="confirm-password"
             className="short-input"
             autoComplete="new-password"
             required
@@ -146,9 +135,9 @@ export default function Form() {
           type="tel"
           name="phoneNo"
           id="phoneNo"
+          inputMode="numeric"
+          pattern="[0-9\s]{10,19}"
           className="text-select"
-          minLength={10}
-          maxLength={13}
           required
         />
       </div>
@@ -159,9 +148,8 @@ export default function Form() {
           type="text"
           name="panNo"
           id="panNo"
+          pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
           className="text-select"
-          minLength={14}
-          maxLength={19}
           required
         />
       </div>
@@ -172,9 +160,9 @@ export default function Form() {
           type="text"
           name="aadhar"
           id="aadhar"
+          inputMode="numeric"
+          pattern="[0-9\s]{13,19}"
           className="text-select"
-          minLength={12}
-          maxLength={12}
           required
         />
       </div>
