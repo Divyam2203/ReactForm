@@ -14,15 +14,48 @@ form{
 }
 
 input{
-  width: 60%;
   color:black;
-  font-size:1rem ;
+  font-size:1.2rem ;
+}
+
+.text-select{
+  width: 60%; 
   padding: 0.6rem 0.5rem;
   margin: 3.5px 12px 20px 0;
   min-width: 300px;
   box-sizing: border-box;
   border-radius: 0.5rem;
   border: #102d2d;
+}
+
+.short-input{
+  width: 20%; 
+  padding: 0.6rem 0.5rem;
+  margin: 3.5px 12px 20px 0;
+  min-width: 220px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: #102d2d;
+}
+
+.medium-short-input{
+  width: 20%; 
+  padding: 0.6rem 0.5rem;
+  margin: 3.5px 12px 20px 0;
+  min-width: 220px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: #102d2d;
+}
+
+.checkbox{
+  margin:0 0 35px 0;
+  height: 25px;
+  width: 25px;
+}
+
+.checkbox-container{
+  height: 40px;
 }
 
 span{
@@ -57,3 +90,11 @@ button{
   font-size: 16px;
   cursor: pointer;
 }
+
+.control-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
