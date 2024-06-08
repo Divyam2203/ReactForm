@@ -41,76 +41,76 @@ export default function Form() {
           type="email"
           name="email"
           id="email"
-          className="text-select"
+          className="text-select control"
           required
         />
+      </div>
+
+      <div className="control-row">
+        <div className="control">
+          <label htmlFor="password">Password</label>
+          <br />
+          <input
+            type={passwordToggle}
+            name="password"
+            id="password"
+            className="short-input"
+            autoComplete="new-password"
+            required
+          />
+        </div>
+        <div className="control">
+          <label htmlFor="confirm-password">Confirm Password</label>
+          <br />
+          <input
+            type={passwordToggle}
+            name="confirm-password"
+            id="confirm-password"
+            className="short-input"
+            autoComplete="new-password"
+            required
+          />
+        </div>
+      </div>
+      <div className="control checkbox-container">
+        <input
+          type="checkbox"
+          className="checkbox"
+          id="checkbox"
+          onClick={handleShowPassword}
+        />
+        <label htmlFor="checkbox">Show Password</label>
       </div>
       <div>
         <div className="control-row">
           <div className="control">
-            <label htmlFor="password">Password</label>
-            <br />
-            <input
-              type={passwordToggle}
-              name="password"
-              id="password"
-              className="short-input"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="confirm-password">Confirm Password</label>
-            <br />
-            <input
-              type={passwordToggle}
-              name="confirm-password"
-              id="confirm-password"
-              className="short-input"
-              required
-            />
-          </div>
-        </div>
-        <div className="checkbox-container">
-          <span>
-            <input
-              type="checkbox"
-              className="checkbox"
-              id="checkbox"
-              onClick={handleShowPassword}
-            />
-            Show Password
-          </span>
-        </div>
-      </div>
-      <div>
-        <div className="control-row">
-          <div>
             <label htmlFor="firstName">First Name</label>
             <br />
             <input
               type="text"
               name="firstName"
               id="firstName"
+              autoComplete="given-name"
               required
               className="short-input"
             />
           </div>
-          <div>
+          <div className="control">
             <label htmlFor="secondName">Second Name</label>
             <br />
             <input
               type="text"
               name="secondName"
               id="secondName"
-              className="short-input"
+              className="short-input "
+              autoComplete="family-name"
               required
             />
           </div>
         </div>
-        <span>invalid</span>
       </div>
       <div className="control-row">
-        <div>
+        <div className="control">
           <label htmlFor="country">Country</label>
           <br />
           <select
@@ -127,7 +127,7 @@ export default function Form() {
             ))}
           </select>
         </div>
-        <div>
+        <div className="control">
           <label htmlFor="city">City</label>
           <br />
           <select name="city" id="city" className="short-input" required>
@@ -139,7 +139,7 @@ export default function Form() {
           </select>
         </div>
       </div>
-      <div>
+      <div className="control">
         <label htmlFor="phoneNo">Phone No.</label>
         <br />
         <input
@@ -147,10 +147,12 @@ export default function Form() {
           name="phoneNo"
           id="phoneNo"
           className="text-select"
+          minLength={10}
+          maxLength={13}
           required
         />
       </div>
-      <div>
+      <div className="control">
         <label htmlFor="panNo">Pan No.</label>
         <br />
         <input
@@ -158,10 +160,12 @@ export default function Form() {
           name="panNo"
           id="panNo"
           className="text-select"
+          minLength={14}
+          maxLength={19}
           required
         />
       </div>
-      <div>
+      <div className="control">
         <label htmlFor="aadhar">Aadhar No.</label>
         <br />
         <input
@@ -169,9 +173,10 @@ export default function Form() {
           name="aadhar"
           id="aadhar"
           className="text-select"
+          minLength={12}
+          maxLength={12}
           required
         />
-        <span>invalid</span>
       </div>
 
       <div>
