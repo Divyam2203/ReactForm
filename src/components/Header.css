@@ -1,0 +1,21 @@
+header{
+  width: 90%;
+  max-width: 40rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(180deg, #dcdcdc, #989d9d);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+img{
+  max-width: 80px;
+  float: left;
+  position: relative;
+}
+
+h1{
+  padding-left: 20%;
+  font-weight: 600;
+}

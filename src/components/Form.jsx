@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { COUNTRIES } from "./COUNTRIES";
 import { CITIES } from "./CITIES";
+import "./Form.css";
 
 export default function Form() {
   function handleSubmit(event) {
@@ -23,26 +24,32 @@ export default function Form() {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="First Name">First Name</label>
-        <input type="text" name="firstName" />
+        <br />
+        <input type="text" name="firstName" /><span>invalid</span>
       </div>
       <div>
         <label htmlFor="Second Name">Second Name</label>
+        <br />
         <input type="text" name="secondName" />
       </div>
       <div>
         <label htmlFor="Email">Email</label>
+        <br />
         <input type="email" name="email" />
       </div>
       <div>
         <label htmlFor="Password">Password</label>
+        <br />
         <input type="password" name="password" />
       </div>
       <div>
         <label htmlFor="phoneNo">Phone No.</label>
+        <br />
         <input type="tel" name="phoneNo" />
       </div>
       <div>
         <label htmlFor="country">Country</label>
+        <br />
         <select name="country" onChange={handleCountry}>
           {COUNTRIES.map((country) => (
             <option value={country} key={country}>
@@ -53,8 +60,9 @@ export default function Form() {
       </div>
       <div>
         <label htmlFor="city">City</label>
+        <br />
         <select name="city">
-        {cities.map((city) => (
+          {cities.map((city) => (
             <option value={city} key={city}>
               {city}
             </option>
@@ -63,20 +71,18 @@ export default function Form() {
       </div>
       <div>
         <label htmlFor="panNo">Pan No.</label>
+        <br />
         <input type="text" name="panNo" />
       </div>
       <div>
         <label htmlFor="aadhar">Aadhar No.</label>
-        <input type="text" name="aadhar" />
+        <br />
+        <input type="text" name="aadhar" /><span>invalid</span>
       </div>
 
       <div>
-        <div>
-          <button type="reset">Reset</button>
-        </div>
-        <div>
-          <button>Submit</button>
-        </div>
+        <button type="reset">Reset</button>
+        <button>Submit</button>
       </div>
     </form>
   );
