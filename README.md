@@ -35,9 +35,9 @@ npm run dev
 ```
 ## Screenshots
 
+![Screenshot (330)](https://github.com/Divyam2203/ReactForm/assets/69101943/fc966590-ffa1-41f7-ba9e-0381f4f4448c)
 ![Screenshot (332)](https://github.com/Divyam2203/ReactForm/assets/69101943/326ba951-d741-4c98-9ca6-887f7e364905)
 ![Screenshot (331)](https://github.com/Divyam2203/ReactForm/assets/69101943/f686fa06-629c-43ae-becf-b0bd1fd175a7)
-![Screenshot (330)](https://github.com/Divyam2203/ReactForm/assets/69101943/fc966590-ffa1-41f7-ba9e-0381f4f4448c)
 
 
 ## Successful Submission
